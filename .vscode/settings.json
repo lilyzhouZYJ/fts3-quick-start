@@ -1,0 +1,14 @@
+{
+    "cmake.cmakePath": "cmake3",
+    "cmake.configureEnvironment": {
+        "ALLBUILD": "ON"
+    },
+    "cmake.ctestPath": "ctest3",
+    "cmake.configureArgs": [
+        "-DALLBUILD=ON"
+    ],
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+    "cmake.configureOnOpen": true
+}
