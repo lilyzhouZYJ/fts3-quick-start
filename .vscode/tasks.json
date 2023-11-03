@@ -1,0 +1,35 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Stop FTS3 Server",
+            "type": "shell",
+            "command": "/workspace/.vscode/stop-fts-server.sh"
+        },
+        {
+            "label": "Install FTS3",
+            "type": "shell",
+            "command": "/workspace/.vscode/reinstall-fts3.sh",
+            "options": {
+                "cwd": "/workspace/packaging"
+            }
+        },
+        {
+            "label": "Stop and Reinstall FTS3",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Stop FTS3 Server", "Install FTS3"]
+        },
+        {
+            "label": "Start FTS3 Server",
+            "type": "shell",
+            "command": "/docker-entrypoint.sh"
+        },
+        {
+            "label": "Restart FTS3 Server",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Stop FTS3 Server", "Start FTS3 Server"]
+        }
+    ]
+}

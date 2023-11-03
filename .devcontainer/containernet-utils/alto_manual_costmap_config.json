@@ -1,0 +1,190 @@
+{
+  "resource-cost-map": {
+    "resource-id": "default-costmap",
+    "tag": "3ee2cb7e8d63d9fab71b9b34cbf76443",
+    "meta": {
+      "dependent-vtags": [
+        {
+          "resource-id": "default-networkmap",
+          "tag": "da65eca2eb7a10ce8b059740b0b2e3f8"
+        }
+      ]
+    },
+    "map": [
+      {
+        "src": "RUCIO",
+        "dst-costs": [
+          {
+            "dst": "RUCIO",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "PID0",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "XRD1",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD2",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD3",
+            "numerical-cost-value": 0.2
+          },
+          {
+            "dst": "XRD4",
+            "numerical-cost-value": 0.5
+          }
+        ]
+      },
+      {
+        "src": "XRD1",
+        "dst-costs": [
+          {
+            "dst": "RUCIO",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "PID0",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD1",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "XRD2",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD3",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD4",
+            "numerical-cost-value": 1
+          }
+        ]
+      },
+      {
+        "src": "XRD2",
+        "dst-costs": [
+          {
+            "dst": "RUCIO",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "PID0",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD1",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD2",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "XRD3",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD4",
+            "numerical-cost-value": 1
+          }
+        ]
+      },
+      {
+        "src": "XRD3",
+        "dst-costs": [
+          {
+            "dst": "RUCIO",
+            "numerical-cost-value": 0.2
+          },
+          {
+            "dst": "PID0",
+            "numerical-cost-value": 0.2
+          },
+          {
+            "dst": "XRD1",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD2",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD3",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "XRD4",
+            "numerical-cost-value": 0.5
+          }
+        ]
+      },
+      {
+        "src": "XRD4",
+        "dst-costs": [
+          {
+            "dst": "RUCIO",
+            "numerical-cost-value": 0.5
+          },
+          {
+            "dst": "PID0",
+            "numerical-cost-value": 0.5
+          },
+          {
+            "dst": "XRD1",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD2",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD3",
+            "numerical-cost-value": 0.5
+          },
+          {
+            "dst": "XRD4",
+            "numerical-cost-value": 0
+          }
+        ]
+      },
+      {
+        "src": "PID0",
+        "dst-costs": [
+          {
+            "dst": "RUCIO",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "PID0",
+            "numerical-cost-value": 0
+          },
+          {
+            "dst": "XRD1",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD2",
+            "numerical-cost-value": 1
+          },
+          {
+            "dst": "XRD3",
+            "numerical-cost-value": 0.2
+          },
+          {
+            "dst": "XRD4",
+            "numerical-cost-value": 0.5
+          }
+        ]
+      }
+    ]
+  }
+}

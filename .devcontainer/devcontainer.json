@@ -2,9 +2,13 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
 	"name": "CERN FTS3",
-	"build": {
-		"dockerfile": "Dockerfile"
-	}
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "fts-dev",
+	"shutdownAction": "none",
+	"workspaceFolder": "/workspace",
+	"containerEnv": {
+		"WORKSPACE": "${containerWorkspaceFolder}"
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -16,7 +20,15 @@
 	// "postCreateCommand": "gcc -v",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
