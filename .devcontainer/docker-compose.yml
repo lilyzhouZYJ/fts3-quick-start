@@ -1,6 +1,7 @@
 version: '3'
 services:
   fts-dev:
+    platform: linux/amd64
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
@@ -16,6 +17,7 @@ services:
         hard: 10240
     network_mode: service:rucio
   ftsdb:
+    platform: linux/amd64
     image: docker.io/mysql:8
     command: --default-authentication-plugin=mysql_native_password
     environment:
@@ -25,6 +27,7 @@ services:
       - MYSQL_DATABASE=fts
     network_mode: service:rucio
   rucio:
+    platform: linux/amd64
     image: docker.io/fno2010/rucio-dev:latest-alma9
     command: /bin/sh -c "while sleep 1000; do :; done"
     cap_add:
@@ -64,6 +67,7 @@ services:
       - ./certs/ssh/ruciouser_sshkey.pub:/root/.ssh/ruciouser_sshkey.pub:z
       - ./certs/ssh/ruciouser_sshkey:/root/.ssh/ruciouser_sshkey:z
   activemq:
+    platform: linux/amd64
     image: docker.io/webcenter/activemq:latest
     environment:
       - ACTIVEMQ_CONFIG_NAME=activemq
@@ -77,6 +81,7 @@ services:
       - ACTIVEMQ_CONFIG_QUEUES_events=/queue/events'
     network_mode: service:rucio
   mininet:
+    platform: linux/amd64
     cap_add:
     - NET_ADMIN
     - SYS_ADMIN
@@ -94,6 +99,7 @@ services:
         soft: 10240
         hard: 10240
   xrd1:
+    platform: linux/amd64
     image: docker.io/fno2010/xrootd:32.5.0
     cap_add:
       - NET_ADMIN
@@ -117,6 +123,7 @@ services:
         soft: 10240
         hard: 10240
   xrd2:
+    platform: linux/amd64
     image: docker.io/fno2010/xrootd:32.5.0
     cap_add:
       - NET_ADMIN
@@ -140,6 +147,7 @@ services:
         soft: 10240
         hard: 10240
   xrd3:
+    platform: linux/amd64
     image: docker.io/fno2010/xrootd:32.5.0
     cap_add:
       - NET_ADMIN

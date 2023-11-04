@@ -1,4 +1,4 @@
-FROM centos:7
+FROM --platform=linux/amd64 centos:7
 
 # Visual Studio Code Dev Container Environment
 ARG USERNAME=vscode
@@ -20,6 +20,9 @@ ADD packaging/rpm/fts.spec /
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
     && ulimit -n 102400
+
+# Override environment variable
+RUN sed -i 's/\$basearch/x86_64/' /etc/yum.repos.d/*
 
 # Install Development Dependencies
 RUN yum install -y epel-release \
