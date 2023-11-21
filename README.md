@@ -1,5 +1,7 @@
 # FTS3 Quick Start
 
+This repo was originally forked from [fts3-quick-start](https://github.com/fno2010/fts3-quick-start) by Jensen Zhang. The `.devcontainer` directory was modified by Jackie Dong [here](https://github.com/jackiedong6/fts3-quick-start) in order to support development on ARM architecture.
+
 ## Setting up Development Environment using Visual Studio Code
 
 If you use Visual Studio Code as the editor, you can use "Dev Container" to
@@ -17,10 +19,10 @@ If possible, we highly suggest to also install the `docker-buildx` extension.
 
 ```
 # Clone the fts3 repo to your local machine
-git clone https://github.com/cern-fts/fts3
+git clone git@github.com:cern-fts/fts3.git
 
 # Clone this repo to your local machine
-git clone https://github.com/fno2010/fts3-quick-start
+git clone git@github.com:lilyzhouZYJ/fts3-quick-start.git
 
 # Copy .devcontainer to the root directory of fts3
 cp -r fts3-quick-start/.devcontainer fts3/
