@@ -51,6 +51,8 @@ cp -r fts3-quick-start/.vscode fts3/
 
         ![devcontainer list](devcontainers-list.png)
 
+>Note: when CMake configures the project workspace, make sure the correct version of GCC is selected to ensure support for `-std=c++17` flag. If this is selection is not automatically prompted, select the kit with `Ctrl`-`Shift`-`P` and run `CMake: Select a Kit`.
+
 ## Building `fts3` from Source Code inside Dev Container
 
 ### Using CMake Tools Extension
@@ -77,6 +79,8 @@ make
 After you verify your `fts3` source code can be compiled, you can install your
 local-built `fts3` packages to the container:
 Open the editor commands with `Ctrl`-`Shift`-`P` and run `Tasks: Run Task` -> `Stop and Reinstall FTS3`.
+
+>For some reason, the `mod_wsgi` module is missing. Fix this by running `yum install mod_wsgi`.
 
 ### Running Local-Built `fts3`
 
@@ -111,11 +115,11 @@ root@0d353983c37e:/containernet# python3 /utils/rucio_example.py
 ```
 
 To submit the testing transfers, you can go to another external terminal, and
-use the `.devcontainer/container-utils/fts_utils.sh`:
+use the `.devcontainer/containernet-utils/fts_utils.sh`:
 
 ``` sh
-$ cd .devcontainer/container-utils
-$ . fts_utils.sh
+$ cd .devcontainer/containernet-utils
+$ . ./fts_utils.sh
 ```
 
 Then you can follow the same instruction in [this
